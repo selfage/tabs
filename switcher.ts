@@ -1,9 +1,16 @@
-export class TabSwitcher {
+export class TabsSwitcher {
   private hidePreviousTab: () => void = () => {};
 
-  public show(showTab: () => void, hideTab: () => void): void {
+  public static create(): TabsSwitcher {
+    return new TabsSwitcher();
+  }
+
+  public async show(
+    showTab: () => Promise<void> | void,
+    hideTab: () => void
+  ): Promise<void> {
     this.hidePreviousTab();
-    showTab();
     this.hidePreviousTab = hideTab;
+    await showTab();
   }
 }

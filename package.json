@@ -1,6 +1,6 @@
 {
   "name": "@selfage/tabs",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "Http-based client to call services.",
   "repository": {
     "type": "git",
@@ -9,7 +9,8 @@
   "keywords": [
     "Tab",
     "Tabs",
-    "Navigator"
+    "Navigator",
+    "Switcher"
   ],
   "author": "Yuxuan Xie <teststaybaka@gmail.com> (http://www.yuxuanxie.com)",
   "license": "GPL-3.0-or-later",
@@ -17,6 +18,8 @@
     "url": "https://github.com/selfage/tabs/issues"
   },
   "homepage": "https://github.com/selfage/tabs#readme",
+  "main": "./switcher.js",
+  "types": "./switcher.d.ts",
   "files": [
     "**/*.js",
     "**/*.d.ts",

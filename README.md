@@ -10,27 +10,25 @@ Written in TypeScript and compiled to ES6 with inline source map & source. See [
 
 ## TabSwitcher
 
+Instead of tracking all tabs, it simply hides the tab previously shown and shows a new tab, thus a switcher.
+
 ```TypeScript
-import { TabSwitcher } from '@selfage/tabs/switcher';
+import { TabsSwitcher } from '@selfage/tabs';
 
-let tabA = document.createElement('div');
-tabA.style.display = 'none';
-let tabB = document.createElement('div');
-tabB.style.display = 'none';
+let tabA: HTMLDivElement;
+let tabB: HTMLDIvElement;
 
-let tabSwitcher = new TabSwitcher();
-tabSwitcher.show(/* showTab= */ () => {
+let tabsSwitcher = new TabsSwitcher();
+tabsSwitcher.show(/* showTab= */ () => {
   tabA.style.display = 'block';
 }, /* hideTab= */ () => {
   tabA.style.display = 'none';
 });
 // Now tabA is shown.
-tabSwitcher.show(/* showTab= */ () => {
+tabsSwitcher.show(/* showTab= */ () => {
   tabB.style.display = 'block';
 }, /* hideTab= */ () => {
   tabB.style.display = 'none';
 });
 // Now tabA is hidden and taB is shown.
 ```
-
-Behind the scene, `show()` simply calls the previous `hideTab` callback function, calls the current `showTab` function, and keeps the current `hideTab` function for the next `show()`.

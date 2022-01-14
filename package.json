@@ -1,7 +1,7 @@
 {
   "name": "@selfage/tabs",
-  "version": "2.0.1",
-  "description": "Http-based client to call services.",
+  "version": "2.0.2",
+  "description": "Common features to navigate between tabs.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/selfage/tabs.git"

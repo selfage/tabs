@@ -1,6 +1,6 @@
 {
   "name": "@selfage/tabs",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Common features to navigate between tabs.",
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
     "!test_data/**/*"
   ],
   "devDependencies": {
-    "@selfage/tsconfig": "^1.0.7",
+    "@selfage/tsconfig": "^1.1.0",
     "typescript": "^5.4.5"
   }
 }
